@@ -148,6 +148,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
+    pg (1.5.4-x64-mingw-ucrt)
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
@@ -267,6 +268,7 @@ DEPENDENCIES
   dotenv-rails
   jbuilder (~> 2.7)
   kaminari
+  pg (~> 1.4)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.5)
