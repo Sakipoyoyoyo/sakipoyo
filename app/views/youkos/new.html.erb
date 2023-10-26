@@ -1,0 +1,39 @@
+<h1>(youko)</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @youko do |f| %>
+
+# データ型がstringで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :食品 %>
+    <%= f.text_field :food, :size => 30 %>
+  </div>
+
+# データ型がstringで選択式の入力フォーム
+  <div class="field">
+    <%= f.label :原因 %>
+    <%= f.select :cause, 
+    [["二日酔い", "二日酔い"], 
+    ["貧血", "貧血"], 
+    ["夏バテ", "夏バテ"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :効果 %>
+    <%= f.text_field :effect, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :料理 %>
+    <%= f.text_field :cook, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", youkos_path %>

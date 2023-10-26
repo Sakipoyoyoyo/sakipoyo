@@ -1,0 +1,8 @@
+<h1>夏バテのキモチ</h1>
+<% @youkos.each do |t| %>
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= t.food %>
+    <%= t.effect %>
+    <%= t.cook %>
+    <%= t.cause %>
+<% end %>
